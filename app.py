@@ -15,25 +15,75 @@ foods = {
     "burger":  { "calories": 295, "protein": 13, "fat": 14, "carbs": 30 },
     "poha":    { "calories": 180, "protein": 4,  "fat": 3,  "carbs": 35 },
     "idli":    { "calories": 120, "protein": 3,  "fat": 1,  "carbs": 25 },
-    "dosa":    { "calories": 133, "protein": 3,  "fat": 4,  "carbs": 22 },
     "paneer":  { "calories": 265, "protein": 18, "fat": 20, "carbs": 4  },
-    "dal":     { "calories": 150, "protein": 9,  "fat": 4,  "carbs": 20 },
     "rice":    { "calories": 200, "protein": 4,  "fat": 1,  "carbs": 45 },
     "roti":    { "calories": 120, "protein": 3,  "fat": 2,  "carbs": 25 },
-    "chicken": { "calories": 165, "protein": 31, "fat": 4,  "carbs": 0  },
-    "egg":     { "calories": 70,  "protein": 6,  "fat": 5,  "carbs": 1  },
     "salad":   { "calories": 80,  "protein": 2,  "fat": 1,  "carbs": 10 },
     "milk":    { "calories": 150, "protein": 8,  "fat": 8,  "carbs": 12 },
-    "apple":   { "calories": 95,  "protein": 0,  "fat": 0,  "carbs": 25 },
-    "banana":  { "calories": 105, "protein": 1,  "fat": 0,  "carbs": 27 },
-    "oats":    { "calories": 150, "protein": 5,  "fat": 3,  "carbs": 27 },
-    "yogurt":  { "calories": 100, "protein": 10, "fat": 0,  "carbs": 14 },
-    "almonds": { "calories": 160, "protein": 6,  "fat": 14, "carbs": 6  },
-    "pasta":   { "calories": 200, "protein": 7,  "fat": 1,  "carbs": 40 },
-    "broccoli":{ "calories": 55,  "protein": 4,  "fat": 1,  "carbs": 11 },
-    "upma":    { "calories": 190, "protein": 4,  "fat": 4,  "carbs": 30 },
-    "samosa":  { "calories": 260, "protein": 3,  "fat": 15, "carbs": 28 },
-    "bhindi":  { "calories": 80,  "protein": 2,  "fat": 3,  "carbs": 10 }
+
+    "dal":        { "calories":180, "protein":9,  "fat":5,  "carbs":25 },
+    "chicken":    { "calories":250, "protein":27, "fat":14, "carbs":0  },
+    "egg":        { "calories":70,  "protein":6,  "fat":5,  "carbs":1  },
+    "omelette":   { "calories":150, "protein":10, "fat":11, "carbs":2  },
+
+    "banana":     { "calories":105, "protein":1,  "fat":0,  "carbs":27 },
+    "apple":      { "calories":95,  "protein":0,  "fat":0,  "carbs":25 },
+    "orange":     { "calories":60,  "protein":1,  "fat":0,  "carbs":15 },
+
+    "tea":        { "calories":50,  "protein":1,  "fat":2,  "carbs":8  },
+    "coffee":     { "calories":30,  "protein":1,  "fat":1,  "carbs":5  },
+    "cold drink": { "calories":140, "protein":0,  "fat":0,  "carbs":39 },
+
+    "samosa":     { "calories":250, "protein":5,  "fat":15, "carbs":30 },
+    "vada pav":   { "calories":290, "protein":7,  "fat":12, "carbs":40 },
+    "pav bhaji":  { "calories":400, "protein":8,  "fat":20, "carbs":50 },
+
+    "maggi":      { "calories":350, "protein":8,  "fat":14, "carbs":50 },
+    "noodles":    { "calories":300, "protein":7,  "fat":10, "carbs":45 },
+
+    "biryani":    { "calories":400, "protein":20, "fat":15, "carbs":50 },
+    "fried rice": { "calories":350, "protein":8,  "fat":12, "carbs":50 },
+
+    "curd":       { "calories":100, "protein":6,  "fat":4,  "carbs":8  },
+    "buttermilk": { "calories":60,  "protein":3,  "fat":2,  "carbs":7  },
+
+    "dosa":        { "calories":150, "protein":4,  "fat":5,  "carbs":25 },
+    "masala dosa": { "calories":250, "protein":6,  "fat":10, "carbs":35 },
+    "upma":        { "calories":200, "protein":5,  "fat":7,  "carbs":30 },
+    "paratha":     { "calories":300, "protein":6,  "fat":12, "carbs":40 },
+    "aloo sabzi":  { "calories":180, "protein":3,  "fat":6,  "carbs":30 },
+
+    "rajma":       { "calories":220, "protein":9,  "fat":5,  "carbs":35 },
+    "chole":       { "calories":260, "protein":10, "fat":8,  "carbs":35 },
+    "khichdi":     { "calories":180, "protein":6,  "fat":4,  "carbs":30 },
+
+    "fish":        { "calories":220, "protein":22, "fat":12, "carbs":0  },
+    "grilled chicken": { "calories":200, "protein":30, "fat":8, "carbs":0 },
+    "chicken curry":   { "calories":300, "protein":25, "fat":20, "carbs":5 },
+
+    "bread":       { "calories":80,  "protein":3,  "fat":1,  "carbs":15 },
+    "butter":      { "calories":100, "protein":0,  "fat":11, "carbs":0  },
+    "jam":         { "calories":50,  "protein":0,  "fat":0,  "carbs":13 },
+
+    "sandwich":    { "calories":250, "protein":8,  "fat":10, "carbs":30 },
+    "grilled sandwich": { "calories":280, "protein":10, "fat":12, "carbs":30 },
+
+    "fries":       { "calories":350, "protein":4,  "fat":17, "carbs":45 },
+    "chips":       { "calories":300, "protein":3,  "fat":15, "carbs":40 },
+
+    "cake":        { "calories":350, "protein":5,  "fat":15, "carbs":50 },
+    "chocolate":   { "calories":230, "protein":3,  "fat":13, "carbs":25 },
+    "ice cream":   { "calories":210, "protein":4,  "fat":11, "carbs":25 },
+
+    "juice":       { "calories":120, "protein":1,  "fat":0,  "carbs":28 },
+    "smoothie":    { "calories":180, "protein":5,  "fat":3,  "carbs":35 },
+
+    "oats":        { "calories":150, "protein":5,  "fat":3,  "carbs":27 },
+    "cornflakes":  { "calories":120, "protein":2,  "fat":1,  "carbs":25 },
+
+    "sprouts":     { "calories":100, "protein":8,  "fat":1,  "carbs":18 },
+    "peanuts":     { "calories":170, "protein":7,  "fat":14, "carbs":6  },
+    "almonds":     { "calories":160, "protein":6,  "fat":14, "carbs":6  }
 }
 
 meal_log_db = []
@@ -80,26 +130,49 @@ def get_insight(data):
 @app.route('/analyze', methods=['POST'])
 def analyze():
     req = request.get_json() or {}
-    food_name = req.get("food", "").lower()
+    food_names_input = req.get("food", "").lower()
     goal = req.get("goal", "Balanced")
 
-    if food_name not in foods:
+    # Split by comma and strip whitespaces
+    food_items = [f.strip() for f in food_names_input.split(',') if f.strip()]
+    
+    if not food_items:
+        return jsonify({"error": "Empty input"}), 400
+
+    combined_data = {
+        "calories": 0,
+        "protein": 0,
+        "fat": 0,
+        "carbs": 0
+    }
+    
+    missing_foods = []
+    for fname in food_items:
+        if fname not in foods:
+            missing_foods.append(fname)
+        else:
+            combined_data["calories"] += foods[fname]["calories"]
+            combined_data["protein"] += foods[fname]["protein"]
+            combined_data["fat"] += foods[fname]["fat"]
+            combined_data["carbs"] += foods[fname]["carbs"]
+
+    if missing_foods:
         return jsonify({
-            "error": "Food not found",
+            "error": f"Food not found: {', '.join(missing_foods)}. Try: pizza, dal, rice, egg, banana...",
             "available": list(foods.keys())
         }), 404
 
-    data = foods[food_name]
-    score, status = calculate_score_and_status(food_name, data, goal)
-    suggestion = get_suggestion(food_name, data)
-    insight = get_insight(data)
+    combined_name = ", ".join(food_items)
+    score, status = calculate_score_and_status(combined_name, combined_data, goal)
+    suggestion = get_suggestion(combined_name, combined_data)
+    insight = get_insight(combined_data)
 
     return jsonify({
-        "food": food_name,
-        "calories": data["calories"],
-        "protein": data["protein"],
-        "fat": data["fat"],
-        "carbs": data["carbs"],
+        "food": combined_name,
+        "calories": combined_data["calories"],
+        "protein": combined_data["protein"],
+        "fat": combined_data["fat"],
+        "carbs": combined_data["carbs"],
         "health_score": score,
         "status": status,
         "suggestion": suggestion,
