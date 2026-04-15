@@ -11,15 +11,29 @@ def serve_index():
     return app.send_static_file('index.html')
 
 foods = {
-    "pizza":  { "calories": 300, "protein": 12, "fat": 15, "carbs": 33 },
-    "burger": { "calories": 295, "protein": 13, "fat": 14, "carbs": 30 },
-    "poha":   { "calories": 180, "protein": 4,  "fat": 3,  "carbs": 35 },
-    "idli":   { "calories": 120, "protein": 3,  "fat": 1,  "carbs": 25 },
-    "paneer": { "calories": 265, "protein": 18, "fat": 20, "carbs": 4  },
-    "rice":   { "calories": 200, "protein": 4,  "fat": 1,  "carbs": 45 },
-    "roti":   { "calories": 120, "protein": 3,  "fat": 2,  "carbs": 25 },
-    "salad":  { "calories": 80,  "protein": 2,  "fat": 1,  "carbs": 10 },
-    "milk":   { "calories": 150, "protein": 8,  "fat": 8,  "carbs": 12 }
+    "pizza":   { "calories": 300, "protein": 12, "fat": 15, "carbs": 33 },
+    "burger":  { "calories": 295, "protein": 13, "fat": 14, "carbs": 30 },
+    "poha":    { "calories": 180, "protein": 4,  "fat": 3,  "carbs": 35 },
+    "idli":    { "calories": 120, "protein": 3,  "fat": 1,  "carbs": 25 },
+    "dosa":    { "calories": 133, "protein": 3,  "fat": 4,  "carbs": 22 },
+    "paneer":  { "calories": 265, "protein": 18, "fat": 20, "carbs": 4  },
+    "dal":     { "calories": 150, "protein": 9,  "fat": 4,  "carbs": 20 },
+    "rice":    { "calories": 200, "protein": 4,  "fat": 1,  "carbs": 45 },
+    "roti":    { "calories": 120, "protein": 3,  "fat": 2,  "carbs": 25 },
+    "chicken": { "calories": 165, "protein": 31, "fat": 4,  "carbs": 0  },
+    "egg":     { "calories": 70,  "protein": 6,  "fat": 5,  "carbs": 1  },
+    "salad":   { "calories": 80,  "protein": 2,  "fat": 1,  "carbs": 10 },
+    "milk":    { "calories": 150, "protein": 8,  "fat": 8,  "carbs": 12 },
+    "apple":   { "calories": 95,  "protein": 0,  "fat": 0,  "carbs": 25 },
+    "banana":  { "calories": 105, "protein": 1,  "fat": 0,  "carbs": 27 },
+    "oats":    { "calories": 150, "protein": 5,  "fat": 3,  "carbs": 27 },
+    "yogurt":  { "calories": 100, "protein": 10, "fat": 0,  "carbs": 14 },
+    "almonds": { "calories": 160, "protein": 6,  "fat": 14, "carbs": 6  },
+    "pasta":   { "calories": 200, "protein": 7,  "fat": 1,  "carbs": 40 },
+    "broccoli":{ "calories": 55,  "protein": 4,  "fat": 1,  "carbs": 11 },
+    "upma":    { "calories": 190, "protein": 4,  "fat": 4,  "carbs": 30 },
+    "samosa":  { "calories": 260, "protein": 3,  "fat": 15, "carbs": 28 },
+    "bhindi":  { "calories": 80,  "protein": 2,  "fat": 3,  "carbs": 10 }
 }
 
 meal_log_db = []
