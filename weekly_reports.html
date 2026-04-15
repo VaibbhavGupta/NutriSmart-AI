@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriSmart AI - Weekly Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#003c0b",
+                    "surface-tint": "#006e1c",
+                    "tertiary-fixed-dim": "#cdc897",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-background": "#1a1c1c",
+                    "on-tertiary-container": "#43411b",
+                    "primary": "#006e1c",
+                    "surface-container": "#eeeeee",
+                    "surface-container-low": "#f3f3f3",
+                    "on-surface": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container-highest": "#e2e2e2",
+                    "inverse-primary": "#78dc77",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#631800",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "primary-fixed-dim": "#78dc77",
+                    "error": "#ba1a1a",
+                    "secondary": "#ac3509",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary-container": "#b1ad7d",
+                    "on-secondary-fixed-variant": "#852300",
+                    "surface-dim": "#dadada",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-fixed": "#3a0a00",
+                    "on-primary-fixed": "#002204",
+                    "outline-variant": "#becab9",
+                    "outline": "#6f7a6b",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-surface-variant": "#3f4a3c",
+                    "on-tertiary-fixed-variant": "#4b4822",
+                    "background": "#f9f9f9",
+                    "primary-container": "#4caf50",
+                    "secondary-fixed-dim": "#ffb59f",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fe6f42",
+                    "tertiary": "#636037",
+                    "inverse-on-surface": "#f1f1f1",
+                    "tertiary-fixed": "#eae4b1",
+                    "on-tertiary-fixed": "#1e1c00",
+                    "primary-fixed": "#94f990"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bloom-path {
+            fill: none;
+            stroke: url(#gradient-bloom);
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-dasharray: 100 100;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Desktop) -->
+<nav class="fixed left-0 top-0 h-screen w-[220px] hidden md:flex flex-col bg-[#f9f9f9] dark:bg-stone-900 p-6 gap-8 z-40">
+<div class="text-xl font-bold text-[#006e1c] dark:text-[#4caf50] flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+            NutriSmart AI
+        </div>
+<div class="flex flex-col gap-2 flex-grow">
+<a class="text-[#3f4a3c] dark:text-stone-400 hover:text-[#006e1c] px-4 py-2 flex items-center gap-3 transition-colors hover:bg-[#f3f3f3] dark:hover:bg-stone-800 rounded-full font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">home</span> Dashboard
+            </a>
+<a class="text-[#3f4a3c] dark:text-stone-400 hover:text-[#006e1c] px-4 py-2 flex items-center gap-3 transition-colors hover:bg-[#f3f3f3] dark:hover:bg-stone-800 rounded-full font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">search</span> Analyze Food
+            </a>
+<a class="text-[#3f4a3c] dark:text-stone-400 hover:text-[#006e1c] px-4 py-2 flex items-center gap-3 transition-colors hover:bg-[#f3f3f3] dark:hover:bg-stone-800 rounded-full font-medium text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">calendar_today</span> Diet Planner
+            </a>
+<a class="bg-[#006e1c] text-white rounded-full px-4 py-2 flex items-center gap-3 transition-all font-medium text-sm tracking-wide shadow-lg shadow-[#006e1c]/20" href="#">
+<span class="material-symbols-outlined">bar_chart</span> Reports
+            </a>
+</div>
+<div class="mt-auto flex flex-col gap-2">
+<div class="bg-surface-container rounded-xl p-4 mb-4">
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Health Status</p>
+<p class="text-sm font-bold text-primary">BMI: 22.4 Normal</p>
+</div>
+<a class="text-[#3f4a3c] dark:text-stone-400 hover:text-[#006e1c] px-4 py-2 flex items-center gap-3 transition-colors hover:bg-[#f3f3f3] rounded-full text-sm font-medium" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+<a class="text-[#3f4a3c] dark:text-stone-400 hover:text-[#006e1c] px-4 py-2 flex items-center gap-3 transition-colors hover:bg-[#f3f3f3] rounded-full text-sm font-medium" href="#">
+<span class="material-symbols-outlined">help</span> Support
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="md:ml-[220px] pb-24 md:pb-12 min-h-screen">
+<header class="p-8 md:p-12">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Your Weekly Report 📊</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">A curated look at your nutritional journey from Oct 12 – Oct 18. You're blooming beautifully.</p>
+</header>
+<section class="px-8 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Summary Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_32px_-4px_rgba(0,110,28,0.04)] transition-transform hover:scale-[1.02]">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">local_fire_department</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Daily Average</span>
+</div>
+<h3 class="text-4xl font-extrabold text-on-surface">1,840</h3>
+<p class="text-sm text-on-surface-variant mt-1">Calories Consumed</p>
+<div class="mt-6 flex items-center gap-2 text-primary font-bold text-xs">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+                    -4% from last week
+                </div>
+</div>
+<!-- Summary Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_32px_-4px_rgba(0,110,28,0.04)] transition-transform hover:scale-[1.02]">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">favorite</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Health Vitality</span>
+</div>
+<h3 class="text-4xl font-extrabold text-on-surface">88<span class="text-xl font-medium text-on-surface-variant">/100</span></h3>
+<p class="text-sm text-on-surface-variant mt-1">Average Health Score</p>
+<div class="mt-6 flex items-center gap-2 text-primary font-bold text-xs">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+                    +12 pts this week
+                </div>
+</div>
+<!-- Summary Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_32px_-4px_rgba(0,110,28,0.04)] transition-transform hover:scale-[1.02]">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-tertiary text-3xl">bolt</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Consistency</span>
+</div>
+<h3 class="text-4xl font-extrabold text-on-surface">14 Days</h3>
+<p class="text-sm text-on-surface-variant mt-1">Current Logging Streak</p>
+<div class="mt-6 flex items-center gap-2 text-primary font-bold text-xs">
+<span class="material-symbols-outlined text-sm">workspace_premium</span>
+                    New personal record!
+                </div>
+</div>
+</section>
+<!-- Calorie Intake Chart -->
+<section class="px-8 md:px-12 mt-10">
+<div class="bg-surface-container-low p-8 rounded-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<h2 class="text-2xl font-bold text-on-surface">Calorie Intake This Week</h2>
+<p class="text-on-surface-variant">Visualizing your metabolic fuel distribution.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Below Goal</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Above Goal</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 md:gap-6 items-end h-64 border-b border-outline-variant/20 pb-4">
+<div class="group relative flex flex-col items-center">
+<div class="w-full bg-primary rounded-t-xl h-[80%] transition-all group-hover:opacity-80"></div>
+<span class="mt-4 text-xs font-bold text-on-surface-variant">Mon</span>
+</div>
+<div class="group relative flex flex-col items-center">
+<div class="w-full bg-primary rounded-t-xl h-[70%] transition-all group-hover:opacity-80"></div>
+<span class="mt-4 text-xs font-bold text-on-surface-variant">Tue</span>
+</div>
+<div class="group relative flex flex-col items-center">
+<div class="w-full bg-primary rounded-t-xl h-[95%] transition-all group-hover:opacity-80"></div>
+<span class="mt-4 text-xs font-bold text-on-surface-variant">Wed</span>
+</div>
+<div class="group relative flex flex-col items-center">
+<div class="w-full bg-secondary-container rounded-t-xl h-[100%] transition-all group-hover:opacity-80"></div>
+<span class="mt-4 text-xs font-bold text-on-surface-variant">Thu</span>
+</div>
+<div class="group relative flex flex-col items-center">
+<div class="w-full bg-primary rounded-t-xl h-[60%] transition-all group-hover:opacity-80"></div>
+<span class="mt-4 text-xs font-bold text-on-surface-variant">Fri</span>
+</div>
+<div class="group relative flex flex-col items-center">
+<div class="w-full bg-primary rounded-t-xl h-[85%] transition-all group-hover:opacity-80"></div>
+<span class="mt-4 text-xs font-bold text-on-surface-variant">Sat</span>
+</div>
+<div class="group relative flex flex-col items-center">
+<div class="w-full bg-primary rounded-t-xl h-[75%] transition-all group-hover:opacity-80"></div>
+<span class="mt-4 text-xs font-bold text-on-surface-variant">Sun</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Row: Foods & Insights -->
+<section class="px-8 md:px-12 mt-10 grid grid-cols-1 md:grid-cols-5 gap-6">
+<!-- Most Eaten Foods -->
+<div class="md:col-span-3 bg-surface-container-lowest p-8 rounded-xl">
+<h2 class="text-2xl font-bold mb-6">Most Eaten Foods</h2>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img alt="Avocado" class="w-12 h-12 rounded-xl object-cover" data-alt="close-up of fresh sliced avocado on a white ceramic plate with bright natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCthrUR1hf_VLeArigErCaLBE4HGwgZY-gHeHTBSRl1_Feo3l0WhatcPOt6OXvW3pxw1n7_Yvwf8zBDeTwugFWnO8Kh2d6gCWsZ0nxfdN_xSPc7AdNdzPq4TMEhpejEgfmoTZPurSCyK7MqjktJ8dUALbvRTCECJ0L5MgJLLNZMBQVCpS0eV4PnwEcSeq8kYEgSY9tVPflPYrZpSDK6y3dPnrD579U5dG8A3Jq3ej33Xj0UtTU1Gu6_IULU7TG_HZNardVck_FoVCh9"/>
+<div>
+<p class="font-bold text-on-surface">Hass Avocado</p>
+<p class="text-xs text-on-surface-variant">5 servings this week</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-[10px] font-bold uppercase">High Fiber</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img alt="Salad" class="w-12 h-12 rounded-xl object-cover" data-alt="vibrant mediterranean salad with chickpeas, cucumbers and tomatoes in a rustic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnOd074OJO6-4pGF26Fu9LYJIjBoHUIBc-4B-vXQjyC2tiQkXWnG9fcAhsnkpHOpMBGmv4ewAESDVKBTRQxEtumdjtb3uC3xzoiQJ_qnQjN0XI5CsgeC7S0OtGMABSvpg77eonlPBSAXaCdkWE8T30FEcePE7beZXSyp-FR2rwLZBtzhWAEa_nvjJLr0lgEaxnbzBClVOdBrgFAoEivd9wuWpGdCQ4GrQ1StbCqTMq3hUCxDmeVFCrZB0eaNlXgcx30URIRwB3ZOGe"/>
+<div>
+<p class="font-bold text-on-surface">Quinoa Power Bowl</p>
+<p class="text-xs text-on-surface-variant">3 servings this week</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-[10px] font-bold uppercase">Plant Based</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img alt="Almonds" class="w-12 h-12 rounded-xl object-cover" data-alt="pile of organic raw almonds on a clean beige surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO05g0AYYf_k6FD5iJr6O1rIc6S0gqQWp-iaRoGcM95mV58IY-i64ftqAY_hslHWik1qwttj9YPqnOXy2yu70q2vrP5ZHmfRQJAopX-cBG3nrqbq0lsnRy_wKZSboyQidIeboULlQVX-S9PCwSWf-5u7LqaE6X6Amzf9QAplHntNv-_i-n-ZuR8qwEmbKxMfGAecnHCNcRzsx8Fry_UFS39YSwYmHbfIKgKFWBsOe2T_3urp9veP8nrr4VFC6JF5ktPn8YTBeSuOnV"/>
+<div>
+<p class="font-bold text-on-surface">Raw Almonds</p>
+<p class="text-xs text-on-surface-variant">7 snacks logged</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-[10px] font-bold uppercase">Healthy Fats</span>
+</div>
+</div>
+</div>
+<!-- Weekly Insight -->
+<div class="md:col-span-2 bg-[#eae4b1] p-8 rounded-xl relative overflow-hidden flex flex-col justify-between border border-[#cdc897]/50">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#4b4822]">lightbulb</span>
+<h2 class="text-lg font-bold text-[#4b4822]">Weekly Insight 💡</h2>
+</div>
+<p class="text-[#4b4822] leading-relaxed font-medium">
+                        Your protein intake peaked on Wednesday, which correlates with your highest active energy burn. To maintain this momentum, try introducing more lean legumes on your rest days (Tues/Fri).
+                    </p>
+</div>
+<div class="mt-8 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest text-[#4b4822]/60">AI Analysis Complete</span>
+<span class="material-symbols-outlined text-[#4b4822] text-4xl opacity-20">psychology</span>
+</div>
+<!-- Decorative grain/texture -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/20 to-transparent rounded-full -mr-16 -mt-16 blur-3xl"></div>
+</div>
+</section>
+<!-- CTA Action -->
+<section class="px-8 md:px-12 mt-12 flex justify-center md:justify-start">
+<button class="bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 transition-all transform active:scale-95 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined">file_download</span>
+                Export Report 📄
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 md:hidden bg-[#f9f9f9]/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-t-[1.5rem] shadow-[0_-4px_20px_rgba(0,110,28,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#3f4a3c] dark:text-stone-400 p-2 opacity-80 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05rem] font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#3f4a3c] dark:text-stone-400 p-2 opacity-80 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05rem] font-bold">Analyze</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#3f4a3c] dark:text-stone-400 p-2 opacity-80 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05rem] font-bold">Planner</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#006e1c] text-white rounded-2xl p-2 min-w-[64px] transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-[0.05rem] font-bold">Reports</span>
+</a>
+</nav>
+</body></html>

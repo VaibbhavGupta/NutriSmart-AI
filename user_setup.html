@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Setup | NutriSmart AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#003c0b",
+                    "surface-tint": "#006e1c",
+                    "tertiary-fixed-dim": "#cdc897",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-background": "#1a1c1c",
+                    "on-tertiary-container": "#43411b",
+                    "primary": "#006e1c",
+                    "surface-container": "#eeeeee",
+                    "surface-container-low": "#f3f3f3",
+                    "on-surface": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container-highest": "#e2e2e2",
+                    "inverse-primary": "#78dc77",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#631800",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "primary-fixed-dim": "#78dc77",
+                    "error": "#ba1a1a",
+                    "secondary": "#ac3509",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary-container": "#b1ad7d",
+                    "on-secondary-fixed-variant": "#852300",
+                    "surface-dim": "#dadada",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-fixed": "#3a0a00",
+                    "on-primary-fixed": "#002204",
+                    "outline-variant": "#becab9",
+                    "outline": "#6f7a6b",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-surface-variant": "#3f4a3c",
+                    "on-tertiary-fixed-variant": "#4b4822",
+                    "background": "#f9f9f9",
+                    "primary-container": "#4caf50",
+                    "secondary-fixed-dim": "#ffb59f",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fe6f42",
+                    "tertiary": "#636037",
+                    "inverse-on-surface": "#f1f1f1",
+                    "tertiary-fixed": "#eae4b1",
+                    "on-tertiary-fixed": "#1e1c00",
+                    "primary-fixed": "#94f990"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .ambient-shadow {
+            box-shadow: 0 12px 32px -4px rgba(0, 110, 28, 0.04);
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #006e1c;
+            box-shadow: 0 0 0 2px rgba(0, 110, 28, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface min-h-screen flex items-center justify-center p-6 sm:p-12 relative overflow-hidden">
+<!-- Decorative Editorial Element -->
+<div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
+<!-- Main Setup Canvas -->
+<main class="w-full max-w-[480px] z-10">
+<!-- Brand Header -->
+<div class="flex flex-col items-center mb-8 gap-3">
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center ambient-shadow">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" data-icon="eco">eco</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight text-primary">NutriSmart AI</h1>
+</div>
+<!-- Setup Card -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 sm:p-10 ambient-shadow">
+<header class="mb-10">
+<h2 class="text-2xl sm:text-3xl font-bold text-on-surface leading-tight tracking-tight mb-3">
+                    Let's personalize your experience 🥗
+                </h2>
+<p class="text-on-surface-variant text-base leading-relaxed">
+                    Welcome! I'm your AI health coach. Tell me a bit about yourself so I can curate your perfect nutritional journal.
+                </p>
+</header>
+<form class="space-y-6">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-[0.08rem] font-bold text-on-surface-variant ml-1">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="person">person</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline transition-all duration-200" placeholder="e.g. Alex Johnson" type="text"/>
+</div>
+</div>
+<!-- Bio-data Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Age -->
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-[0.08rem] font-bold text-on-surface-variant ml-1">Age</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="cake">cake</span>
+<input class="w-full pl-11 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline transition-all duration-200" placeholder="25" type="number"/>
+</div>
+</div>
+<!-- Weight -->
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-[0.08rem] font-bold text-on-surface-variant ml-1">Weight (kg)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="monitor_weight">monitor_weight</span>
+<input class="w-full pl-11 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline transition-all duration-200" placeholder="70" type="number"/>
+</div>
+</div>
+</div>
+<!-- Height -->
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-[0.08rem] font-bold text-on-surface-variant ml-1">Height (cm)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="straighten">straighten</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline transition-all duration-200" placeholder="175" type="number"/>
+</div>
+</div>
+<!-- Your Goal -->
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-[0.08rem] font-bold text-on-surface-variant ml-1">Your Goal</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="flag">flag</span>
+<select class="w-full pl-12 pr-10 py-4 bg-surface-container-low border-none rounded-xl text-on-surface appearance-none focus:ring-2 focus:ring-primary/20 transition-all">
+<option disabled="" selected="" value="">Select your target</option>
+<option value="weight-loss">Weight Loss</option>
+<option value="muscle-gain">Muscle Gain</option>
+<option value="balanced-diet">Balanced Diet</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="group w-full py-5 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-full ambient-shadow hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 mt-8" type="submit">
+                    Get Started
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Footer Message -->
+<footer class="mt-8 text-center">
+<p class="text-sm text-on-surface-variant italic">
+                    "Health is a journey of small, consistent steps."
+                </p>
+</footer>
+</div>
+<!-- Decorative Card (Editorial Background) -->
+<div class="mt-12 flex items-center justify-between px-6 opacity-40 grayscale pointer-events-none">
+<div class="flex flex-col">
+<span class="text-3xl font-black text-outline">NUTRI</span>
+<span class="text-3xl font-black text-outline">SMART</span>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-outline/20"></div>
+</div>
+</main>
+<!-- Side Image Decorative Piece (Editorial style) -->
+<div class="hidden lg:block fixed -right-20 top-1/2 -translate-y-1/2 w-[400px] h-[600px] rotate-6">
+<div class="w-full h-full rounded-[3rem] overflow-hidden ambient-shadow">
+<img alt="Fresh Salad" class="w-full h-full object-cover" data-alt="Close-up of a vibrant Mediterranean salad with fresh greens, cherry tomatoes, and feta cheese in soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCepLslVtNnqrWS2duMhJqN9w97yHPV8ku2fYY8kJ9638j5Ck56CRDw6XI-UGF0YAalVV_K4AlfQX-Z3Cm0Pr4AaNSJ1PLDGKoocPKrPNaOt9cl6ERkTiijMsMoYeXDNpFBSl6IpAGI5nSfA-1pYs-e-GRf3bjNPDr8H_DuW-dd5qQoeusGmKN46TDd8EG4_cGpF0sRMSSoWaPaFbl14ok9tt_XjWcHjmjgzzBXx1znitdgRelwTQuN2OWjDzBRgbcSPpi_LVDYfLn8"/>
+</div>
+</div>
+</body></html>

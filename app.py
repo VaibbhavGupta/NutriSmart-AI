@@ -3,8 +3,12 @@ from flask_cors import CORS
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
+
+@app.route('/')
+def serve_index():
+    return app.send_static_file('index.html')
 
 foods = {
     "pizza":  { "calories": 300, "protein": 12, "fat": 15, "carbs": 33 },
