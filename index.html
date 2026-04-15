@@ -281,7 +281,7 @@
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
 <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Good Morning, Alex! 👋</h1>
-<p class="text-on-surface-variant text-lg leading-relaxed font-medium">Here's your health summary for today • <span class="text-primary">October 24, 2023</span></p>
+<p class="text-on-surface-variant text-lg leading-relaxed font-medium">Here's your health summary for today • <span id="currentDate" class="text-primary">October 24, 2023</span></p>
 </div>
 <div class="hidden md:block">
 <img alt="Profile" class="w-14 h-14 rounded-full border-2 border-white shadow-sm" data-alt="close-up portrait of a friendly man with a warm smile, soft natural outdoor lighting, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKjL3IICWIEzD3NLDaKwxWp-cx4CjaqTMve65krxppNx14PI3r1PYu-MbdfQjw_6ArPE7B6GqsvILD-ZjtJvbTEgz7uv8wPvFoWoWHcq0L8LifQdz7K6CUjr0AM5hmqfD3iqpqp0wClmEeY0LWh-v6VGUfLLwSNfESCcL0st3fR9TXjxWE-awtrvlevAGJ7vERD9yacausDr_adX8pEImuEidxfZI2tLOoy7bgaW7RVU8rBv0DYKxgzLU6Rf90zbfdk2ixy-u_difL"/>
@@ -916,7 +916,7 @@
 <main class="md:ml-[220px] pb-24 md:pb-12 min-h-screen">
 <header class="p-8 md:p-12">
 <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Your Weekly Report 📊</h1>
-<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">A curated look at your nutritional journey from Oct 12 – Oct 18. You're blooming beautifully.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">A curated look at your nutritional journey from <span id="reportDateRange">Oct 12 – Oct 18</span>. You're blooming beautifully.</p>
 </header>
 <section class="px-8 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
 <!-- Summary Card 1 -->
@@ -1316,7 +1316,19 @@
         if (!dash) return;
         
         const h1 = dash.querySelector('h1');
-        if(h1) h1.innerText = `Good Morning, ${userSettings.name}! 👋`;
+        if(h1) {
+            const hour = new Date().getHours();
+            let greeting = 'Good Evening';
+            if (hour < 12) greeting = 'Good Morning';
+            else if (hour < 18) greeting = 'Good Afternoon';
+            h1.innerText = `${greeting}, ${userSettings.name}! 👋`;
+        }
+        
+        const dateSpan = document.getElementById('currentDate');
+        if (dateSpan) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            dateSpan.innerText = new Date().toLocaleDateString('en-US', options);
+        }
         
         const bentoVals = dash.querySelectorAll('.text-3xl.font-extrabold.text-on-surface');
         if (bentoVals.length >= 3) {
@@ -1377,6 +1389,16 @@
     async function updateReports() {
          const rep = document.getElementById('weekly_reports');
          if(!rep) return;
+         
+         const reportDateSpan = document.getElementById('reportDateRange');
+         if (reportDateSpan) {
+             const end = new Date();
+             const start = new Date();
+             start.setDate(end.getDate() - 6);
+             const options = { month: 'short', day: 'numeric' };
+             reportDateSpan.innerText = `${start.toLocaleDateString('en-US', options)} – ${end.toLocaleDateString('en-US', options)}`;
+         }
+
          try {
              const data = await fetchAPI(`/report?days=7`);
              
